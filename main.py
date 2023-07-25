@@ -22,13 +22,15 @@ CREATE TABLE IF NOT EXISTS Images(
 conn.commit()
 conn.close()
 
+MACRO_NAME = ["Scud", "creepy_crawly", "wtf_else"]
+
 class ImageApp:
     def __init__(self, root):
         self.root = root
         self.folder_path = ""
         self.image_list = []
         self.image_index = 0
-        self.list_options = ["Option 1", "Option 2", "Option 3"]
+        self.list_options = MACRO_NAME 
         self.selected_option = tk.StringVar()
 
         self.canvas = tk.Canvas(self.root, width=500, height=500)
